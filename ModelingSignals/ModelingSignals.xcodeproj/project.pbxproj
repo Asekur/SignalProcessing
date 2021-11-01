@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65BB30801FBEA865680B9AEA /* Pods_ModelingSignals_ModelingSignalsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F610FF895AAC07833E0FFF28 /* Pods_ModelingSignals_ModelingSignalsUITests.framework */; };
+		841C41D1272FE4E000035649 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C41D0272FE4E000035649 /* Signal.swift */; };
+		841C41D5272FE5AF00035649 /* SignalPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C41D4272FE5AF00035649 /* SignalPlayer.swift */; };
+		841C41D7272FE61700035649 /* GroupPolyharmonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C41D6272FE61700035649 /* GroupPolyharmonic.swift */; };
+		842EB81D272FF61500656C5A /* SignalFormulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB81C272FF61500656C5A /* SignalFormulas.swift */; };
+		842EB820273000BE00656C5A /* SignalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB81F273000BE00656C5A /* SignalDelegate.swift */; };
+		842EB822273000F100656C5A /* SignalModulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB821273000F100656C5A /* SignalModulation.swift */; };
+		842EB8242730012800656C5A /* GroupModulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB8232730012800656C5A /* GroupModulation.swift */; };
+		842EB829273001B100656C5A /* GroupAmplitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB828273001B100656C5A /* GroupAmplitude.swift */; };
+		842EB82B2730030A00656C5A /* GroupFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB82A2730030A00656C5A /* GroupFrequency.swift */; };
+		844A2BFD26F7588F008484EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2BFC26F7588F008484EE /* AppDelegate.swift */; };
+		844A2BFF26F7588F008484EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2BFE26F7588F008484EE /* ViewController.swift */; };
+		844A2C0126F75890008484EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A2C0026F75890008484EE /* Assets.xcassets */; };
+		844A2C0426F75890008484EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A2C0226F75890008484EE /* Main.storyboard */; };
+		844A2C1026F75890008484EE /* ModelingSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2C0F26F75890008484EE /* ModelingSignalsTests.swift */; };
+		844A2C1B26F75890008484EE /* ModelingSignalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2C1A26F75890008484EE /* ModelingSignalsUITests.swift */; };
+		B9A39213C22FCCA2652785C8 /* Pods_ModelingSignalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9279395F2FB155EE0E5D1420 /* Pods_ModelingSignalsTests.framework */; };
+		D7EF5F13363D45F66CBCA2B9 /* Pods_ModelingSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6095F4DD4FD8B43A8AEB2C86 /* Pods_ModelingSignals.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		844A2C0C26F75890008484EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844A2BF126F7588F008484EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844A2BF826F7588F008484EE;
+			remoteInfo = ModelingSignals;
+		};
+		844A2C1726F75890008484EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844A2BF126F7588F008484EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844A2BF826F7588F008484EE;
+			remoteInfo = ModelingSignals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		539979A68A19688BB788D19C /* Pods-ModelingSignals-ModelingSignalsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignals-ModelingSignalsUITests.release.xcconfig"; path = "Target Support Files/Pods-ModelingSignals-ModelingSignalsUITests/Pods-ModelingSignals-ModelingSignalsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6095F4DD4FD8B43A8AEB2C86 /* Pods_ModelingSignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModelingSignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E434223E3FFF0D08071409 /* Pods-ModelingSignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignals.debug.xcconfig"; path = "Target Support Files/Pods-ModelingSignals/Pods-ModelingSignals.debug.xcconfig"; sourceTree = "<group>"; };
+		841C41D0272FE4E000035649 /* Signal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		841C41D4272FE5AF00035649 /* SignalPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalPlayer.swift; sourceTree = "<group>"; };
+		841C41D6272FE61700035649 /* GroupPolyharmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPolyharmonic.swift; sourceTree = "<group>"; };
+		842EB81C272FF61500656C5A /* SignalFormulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFormulas.swift; sourceTree = "<group>"; };
+		842EB81F273000BE00656C5A /* SignalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDelegate.swift; sourceTree = "<group>"; };
+		842EB821273000F100656C5A /* SignalModulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalModulation.swift; sourceTree = "<group>"; };
+		842EB8232730012800656C5A /* GroupModulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModulation.swift; sourceTree = "<group>"; };
+		842EB828273001B100656C5A /* GroupAmplitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAmplitude.swift; sourceTree = "<group>"; };
+		842EB82A2730030A00656C5A /* GroupFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFrequency.swift; sourceTree = "<group>"; };
+		844A2BF926F7588F008484EE /* ModelingSignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelingSignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844A2BFC26F7588F008484EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		844A2BFE26F7588F008484EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844A2C0026F75890008484EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844A2C0326F75890008484EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		844A2C0526F75890008484EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844A2C0626F75890008484EE /* ModelingSignals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ModelingSignals.entitlements; sourceTree = "<group>"; };
+		844A2C0B26F75890008484EE /* ModelingSignalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelingSignalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844A2C0F26F75890008484EE /* ModelingSignalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelingSignalsTests.swift; sourceTree = "<group>"; };
+		844A2C1126F75890008484EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844A2C1626F75890008484EE /* ModelingSignalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelingSignalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844A2C1A26F75890008484EE /* ModelingSignalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelingSignalsUITests.swift; sourceTree = "<group>"; };
+		844A2C1C26F75890008484EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9279395F2FB155EE0E5D1420 /* Pods_ModelingSignalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModelingSignalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDED7AD5D5C3B465D914E15 /* Pods-ModelingSignalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignalsTests.debug.xcconfig"; path = "Target Support Files/Pods-ModelingSignalsTests/Pods-ModelingSignalsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E022F5E439160ED99AF77CCA /* Pods-ModelingSignalsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignalsTests.release.xcconfig"; path = "Target Support Files/Pods-ModelingSignalsTests/Pods-ModelingSignalsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F01893E9E422AE32E0F38268 /* Pods-ModelingSignals-ModelingSignalsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignals-ModelingSignalsUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModelingSignals-ModelingSignalsUITests/Pods-ModelingSignals-ModelingSignalsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F610FF895AAC07833E0FFF28 /* Pods_ModelingSignals_ModelingSignalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModelingSignals_ModelingSignalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F684543B2BFD699544894768 /* Pods-ModelingSignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelingSignals.release.xcconfig"; path = "Target Support Files/Pods-ModelingSignals/Pods-ModelingSignals.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		844A2BF626F7588F008484EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7EF5F13363D45F66CBCA2B9 /* Pods_ModelingSignals.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C0826F75890008484EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A39213C22FCCA2652785C8 /* Pods_ModelingSignalsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C1326F75890008484EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65BB30801FBEA865680B9AEA /* Pods_ModelingSignals_ModelingSignalsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		841C41CF272FE4D300035649 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				841C41D0272FE4E000035649 /* Signal.swift */,
+				841C41D4272FE5AF00035649 /* SignalPlayer.swift */,
+				842EB81C272FF61500656C5A /* SignalFormulas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		842EB81E273000AB00656C5A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				842EB81F273000BE00656C5A /* SignalDelegate.swift */,
+				842EB821273000F100656C5A /* SignalModulation.swift */,
+				842EB8232730012800656C5A /* GroupModulation.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		842EB8252730016000656C5A /* Modulations */ = {
+			isa = PBXGroup;
+			children = (
+				841C41D6272FE61700035649 /* GroupPolyharmonic.swift */,
+				842EB828273001B100656C5A /* GroupAmplitude.swift */,
+				842EB82A2730030A00656C5A /* GroupFrequency.swift */,
+			);
+			path = Modulations;
+			sourceTree = "<group>";
+		};
+		844A2BF026F7588F008484EE = {
+			isa = PBXGroup;
+			children = (
+				842EB8252730016000656C5A /* Modulations */,
+				842EB81E273000AB00656C5A /* Protocols */,
+				841C41CF272FE4D300035649 /* Model */,
+				844A2BFB26F7588F008484EE /* ModelingSignals */,
+				844A2C0E26F75890008484EE /* ModelingSignalsTests */,
+				844A2C1926F75890008484EE /* ModelingSignalsUITests */,
+				844A2BFA26F7588F008484EE /* Products */,
+				9130A6D6E97EE3ECEEC99BEB /* Pods */,
+				93B9235040508E6653E552B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		844A2BFA26F7588F008484EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				844A2BF926F7588F008484EE /* ModelingSignals.app */,
+				844A2C0B26F75890008484EE /* ModelingSignalsTests.xctest */,
+				844A2C1626F75890008484EE /* ModelingSignalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		844A2BFB26F7588F008484EE /* ModelingSignals */ = {
+			isa = PBXGroup;
+			children = (
+				844A2BFC26F7588F008484EE /* AppDelegate.swift */,
+				844A2BFE26F7588F008484EE /* ViewController.swift */,
+				844A2C0026F75890008484EE /* Assets.xcassets */,
+				844A2C0226F75890008484EE /* Main.storyboard */,
+				844A2C0526F75890008484EE /* Info.plist */,
+				844A2C0626F75890008484EE /* ModelingSignals.entitlements */,
+			);
+			path = ModelingSignals;
+			sourceTree = "<group>";
+		};
+		844A2C0E26F75890008484EE /* ModelingSignalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				844A2C0F26F75890008484EE /* ModelingSignalsTests.swift */,
+				844A2C1126F75890008484EE /* Info.plist */,
+			);
+			path = ModelingSignalsTests;
+			sourceTree = "<group>";
+		};
+		844A2C1926F75890008484EE /* ModelingSignalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				844A2C1A26F75890008484EE /* ModelingSignalsUITests.swift */,
+				844A2C1C26F75890008484EE /* Info.plist */,
+			);
+			path = ModelingSignalsUITests;
+			sourceTree = "<group>";
+		};
+		9130A6D6E97EE3ECEEC99BEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82E434223E3FFF0D08071409 /* Pods-ModelingSignals.debug.xcconfig */,
+				F684543B2BFD699544894768 /* Pods-ModelingSignals.release.xcconfig */,
+				F01893E9E422AE32E0F38268 /* Pods-ModelingSignals-ModelingSignalsUITests.debug.xcconfig */,
+				539979A68A19688BB788D19C /* Pods-ModelingSignals-ModelingSignalsUITests.release.xcconfig */,
+				AFDED7AD5D5C3B465D914E15 /* Pods-ModelingSignalsTests.debug.xcconfig */,
+				E022F5E439160ED99AF77CCA /* Pods-ModelingSignalsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93B9235040508E6653E552B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6095F4DD4FD8B43A8AEB2C86 /* Pods_ModelingSignals.framework */,
+				F610FF895AAC07833E0FFF28 /* Pods_ModelingSignals_ModelingSignalsUITests.framework */,
+				9279395F2FB155EE0E5D1420 /* Pods_ModelingSignalsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		844A2BF826F7588F008484EE /* ModelingSignals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844A2C1F26F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignals" */;
+			buildPhases = (
+				B1E2EEA54BECFFA765E7CD31 /* [CP] Check Pods Manifest.lock */,
+				844A2BF526F7588F008484EE /* Sources */,
+				844A2BF626F7588F008484EE /* Frameworks */,
+				844A2BF726F7588F008484EE /* Resources */,
+				97A0E764CE2F0E0689C5BEA0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModelingSignals;
+			productName = ModelingSignals;
+			productReference = 844A2BF926F7588F008484EE /* ModelingSignals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		844A2C0A26F75890008484EE /* ModelingSignalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844A2C2226F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignalsTests" */;
+			buildPhases = (
+				B84FF68F239458986F830F39 /* [CP] Check Pods Manifest.lock */,
+				844A2C0726F75890008484EE /* Sources */,
+				844A2C0826F75890008484EE /* Frameworks */,
+				844A2C0926F75890008484EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844A2C0D26F75890008484EE /* PBXTargetDependency */,
+			);
+			name = ModelingSignalsTests;
+			productName = ModelingSignalsTests;
+			productReference = 844A2C0B26F75890008484EE /* ModelingSignalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		844A2C1526F75890008484EE /* ModelingSignalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844A2C2526F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignalsUITests" */;
+			buildPhases = (
+				733265F5D213914D3990E4E1 /* [CP] Check Pods Manifest.lock */,
+				844A2C1226F75890008484EE /* Sources */,
+				844A2C1326F75890008484EE /* Frameworks */,
+				844A2C1426F75890008484EE /* Resources */,
+				95730CE0E08AC68017CC7CEB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844A2C1826F75890008484EE /* PBXTargetDependency */,
+			);
+			name = ModelingSignalsUITests;
+			productName = ModelingSignalsUITests;
+			productReference = 844A2C1626F75890008484EE /* ModelingSignalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		844A2BF126F7588F008484EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					844A2BF826F7588F008484EE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					844A2C0A26F75890008484EE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 844A2BF826F7588F008484EE;
+					};
+					844A2C1526F75890008484EE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 844A2BF826F7588F008484EE;
+					};
+				};
+			};
+			buildConfigurationList = 844A2BF426F7588F008484EE /* Build configuration list for PBXProject "ModelingSignals" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 844A2BF026F7588F008484EE;
+			productRefGroup = 844A2BFA26F7588F008484EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				844A2BF826F7588F008484EE /* ModelingSignals */,
+				844A2C0A26F75890008484EE /* ModelingSignalsTests */,
+				844A2C1526F75890008484EE /* ModelingSignalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		844A2BF726F7588F008484EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844A2C0126F75890008484EE /* Assets.xcassets in Resources */,
+				844A2C0426F75890008484EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C0926F75890008484EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C1426F75890008484EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		733265F5D213914D3990E4E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModelingSignals-ModelingSignalsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95730CE0E08AC68017CC7CEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals-ModelingSignalsUITests/Pods-ModelingSignals-ModelingSignalsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals-ModelingSignalsUITests/Pods-ModelingSignals-ModelingSignalsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals-ModelingSignalsUITests/Pods-ModelingSignals-ModelingSignalsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97A0E764CE2F0E0689C5BEA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals/Pods-ModelingSignals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals/Pods-ModelingSignals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ModelingSignals/Pods-ModelingSignals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1E2EEA54BECFFA765E7CD31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModelingSignals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84FF68F239458986F830F39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModelingSignalsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		844A2BF526F7588F008484EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842EB8242730012800656C5A /* GroupModulation.swift in Sources */,
+				842EB820273000BE00656C5A /* SignalDelegate.swift in Sources */,
+				842EB82B2730030A00656C5A /* GroupFrequency.swift in Sources */,
+				842EB81D272FF61500656C5A /* SignalFormulas.swift in Sources */,
+				844A2BFF26F7588F008484EE /* ViewController.swift in Sources */,
+				842EB822273000F100656C5A /* SignalModulation.swift in Sources */,
+				842EB829273001B100656C5A /* GroupAmplitude.swift in Sources */,
+				841C41D1272FE4E000035649 /* Signal.swift in Sources */,
+				844A2BFD26F7588F008484EE /* AppDelegate.swift in Sources */,
+				841C41D7272FE61700035649 /* GroupPolyharmonic.swift in Sources */,
+				841C41D5272FE5AF00035649 /* SignalPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C0726F75890008484EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844A2C1026F75890008484EE /* ModelingSignalsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844A2C1226F75890008484EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844A2C1B26F75890008484EE /* ModelingSignalsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		844A2C0D26F75890008484EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844A2BF826F7588F008484EE /* ModelingSignals */;
+			targetProxy = 844A2C0C26F75890008484EE /* PBXContainerItemProxy */;
+		};
+		844A2C1826F75890008484EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844A2BF826F7588F008484EE /* ModelingSignals */;
+			targetProxy = 844A2C1726F75890008484EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		844A2C0226F75890008484EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844A2C0326F75890008484EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		844A2C1D26F75890008484EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		844A2C1E26F75890008484EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		844A2C2026F75890008484EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E434223E3FFF0D08071409 /* Pods-ModelingSignals.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ModelingSignals/ModelingSignals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		844A2C2126F75890008484EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F684543B2BFD699544894768 /* Pods-ModelingSignals.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ModelingSignals/ModelingSignals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		844A2C2326F75890008484EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDED7AD5D5C3B465D914E15 /* Pods-ModelingSignalsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModelingSignals.app/Contents/MacOS/ModelingSignals";
+			};
+			name = Debug;
+		};
+		844A2C2426F75890008484EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E022F5E439160ED99AF77CCA /* Pods-ModelingSignalsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModelingSignals.app/Contents/MacOS/ModelingSignals";
+			};
+			name = Release;
+		};
+		844A2C2626F75890008484EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F01893E9E422AE32E0F38268 /* Pods-ModelingSignals-ModelingSignalsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ModelingSignals;
+			};
+			name = Debug;
+		};
+		844A2C2726F75890008484EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539979A68A19688BB788D19C /* Pods-ModelingSignals-ModelingSignalsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ModelingSignalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ModelingSignalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ModelingSignals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		844A2BF426F7588F008484EE /* Build configuration list for PBXProject "ModelingSignals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844A2C1D26F75890008484EE /* Debug */,
+				844A2C1E26F75890008484EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844A2C1F26F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844A2C2026F75890008484EE /* Debug */,
+				844A2C2126F75890008484EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844A2C2226F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844A2C2326F75890008484EE /* Debug */,
+				844A2C2426F75890008484EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844A2C2526F75890008484EE /* Build configuration list for PBXNativeTarget "ModelingSignalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844A2C2626F75890008484EE /* Debug */,
+				844A2C2726F75890008484EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 844A2BF126F7588F008484EE /* Project object */;
+}

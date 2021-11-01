@@ -1,0 +1,6 @@
+framework module Pods_ModelingSignalsTests {
+  umbrella header "Pods-ModelingSignalsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

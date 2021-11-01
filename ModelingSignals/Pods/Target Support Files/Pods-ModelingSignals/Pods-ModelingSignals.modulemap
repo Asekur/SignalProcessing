@@ -1,0 +1,6 @@
+framework module Pods_ModelingSignals {
+  umbrella header "Pods-ModelingSignals-umbrella.h"
+
+  export *
+  module * { export * }
+}
