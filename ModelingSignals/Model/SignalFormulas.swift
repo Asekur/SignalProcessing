@@ -12,13 +12,13 @@ class SignalFormulas {
     static var duty = Float.pi
     static let doublePi = 2 * Float.pi
     //N
-    static let frameCount = 512
+    static let frameCount = 1024
     
     static let sinus = { (phase: Float) -> Float in
         return sin(phase)
     }
     
-    static let whitenoise = { (phase: Float) -> Float in
+    static let noise = { (phase: Float) -> Float in
         return Float.random(in: -1.0...1.0)
     }
     

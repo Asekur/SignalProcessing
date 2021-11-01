@@ -10,14 +10,14 @@ import Foundation
 //описание сигнала
 class Signal: SignalModulation {
     // MARK: - Properties
-    private var type: ((Float) -> Float, String)
+    private var type: (Float) -> Float
     private var currentPhase: Float
     private var frequency: Float
     private var amplitude: Float
     private var incrementPhaseValue: Float
     
     // MARK: - Init
-    init(signalType: ((Float) -> Float, String), currentPhase: Float, frequency: Float, amplitude: Float) {
+    init(signalType: @escaping (Float) -> Float, currentPhase: Float, frequency: Float, amplitude: Float) {
         self.type = signalType
         self.currentPhase = currentPhase
         self.frequency = frequency
@@ -28,11 +28,11 @@ class Signal: SignalModulation {
     
     // MARK: - Methods
     func getValue(for phase: Float) -> Float {
-        return type.0(phase) * self.amplitude
+        return type(phase) * self.amplitude
     }
     
     func getValue() -> Float {
-        return type.0(self.currentPhase) * self.amplitude
+        return type(self.currentPhase) * self.amplitude
     }
     
     func getIncrementPhase() -> Float {
@@ -50,6 +50,6 @@ class Signal: SignalModulation {
     }
     
     func getValueAM() -> Float {
-        return type.0(self.currentPhase)
+        return type(self.currentPhase)
     }
 }

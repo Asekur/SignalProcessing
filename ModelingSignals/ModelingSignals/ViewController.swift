@@ -11,23 +11,43 @@ import Charts
 class ViewController: NSViewController {
     
     @IBOutlet weak var signalChart: LineChartView!
-    private let chartColor = NSColor(calibratedRed: 0.3, green: 0.5, blue: 0.5, alpha: 1).cgColor    
+    @IBOutlet weak var phaseTextField: NSTextField!
+    @IBOutlet weak var frequencyTextField: NSTextField!
+    @IBOutlet weak var amplitudeTextField: NSTextField!
+    @IBOutlet weak var dutyTextField: NSTextField!
+    @IBOutlet weak var signalTypePopUpButton: NSPopUpButton!
+    
+    private let chartColor = NSColor(calibratedRed: 0.3, green: 0.5, blue: 0.5, alpha: 1).cgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        //
-        let signal1 = Signal(signalType: (SignalFormulas.sinus, "sinus"), currentPhase: 2.0, frequency: 3.0, amplitude: 2.0)
-        let signal2 = Signal(signalType: (SignalFormulas.sinus, "sinus"), currentPhase: 2.0, frequency: 3.0, amplitude: 4.0)
-        //let groupPolygarmonic = GroupPolyharmonic(signals: [signal1, signal2])
-        let groupAmplitude = GroupAmplitude(carrierSignal: signal1, modulationSignal: signal2)
-        //let groupFrequency = GroupFrequency(carrierSignal: signal1, modulationSignal: signal2, currentPhase: 4.0)
+    }
+    
+    @IBAction func generateClick(_ sender: Any) {
+        let typeSignal = signalTypePopUpButton.indexOfSelectedItem
+        var signal: Signal!
+        
+        switch typeSignal {
+        case 0:
+            signal = Signal(signalType: SignalFormulas.sinus, currentPhase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue)
+        case 1:
+            signal = Signal(signalType: SignalFormulas.impulse, currentPhase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue)
+        case 2:
+            signal = Signal(signalType: SignalFormulas.triangle, currentPhase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue)
+        case 3:
+            signal = Signal(signalType: SignalFormulas.sawtooth, currentPhase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue)
+        case 4:
+            signal = Signal(signalType: SignalFormulas.noise, currentPhase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue)
+        default:
+            fatalError()
+        }
         
         //отображение сигнала на графике
-                for i in 0..<1024 {
-                    self.appendData(data: ChartDataEntry(x: Double(i), y: Double(groupAmplitude.getValue())))
-                    groupAmplitude.incrementPhase()
-                }
+        for i in 0..<SignalFormulas.frameCount {
+            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
+            signal.incrementPhase()
+        }
     }
     
     private func setupUI() {
