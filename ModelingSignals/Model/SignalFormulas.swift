@@ -18,14 +18,6 @@ class SignalFormulas {
         return sin(phase)
     }
     
-    static let noise = { (phase: Float) -> Float in
-        return Float.random(in: -1.0...1.0)
-    }
-    
-    static let sawtooth = { (phase: Float) -> Float in
-        return 1.0 - 2.0 * (phase * (1.0 / doublePi))
-    }
-    
     static let impulse = { (phase: Float) -> Float in
         return phase <= duty ? 1.0 : -1.0
     }
@@ -36,5 +28,13 @@ class SignalFormulas {
             value = -value
         }
         return 2.0 * (value - 0.5)
+    }
+    
+    static let sawtooth = { (phase: Float) -> Float in
+        return 1.0 - 2.0 * (phase * (1.0 / doublePi))
+    }
+    
+    static let noise = { (phase: Float) -> Float in
+        return Float.random(in: -1.0...1.0)
     }
 }
