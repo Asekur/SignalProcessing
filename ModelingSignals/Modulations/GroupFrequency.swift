@@ -29,6 +29,7 @@ class GroupFrequency: Modulation {
         self.modulationSignal.incrementPhase()
         self.currentPhase += self.carrierSignal.getIncrementPhase() * (1 + self.modulationSignal.getValue())
 
+        //phase in range 0..2pi
         if self.currentPhase >= SignalFormulas.doublePi {
             self.currentPhase -= SignalFormulas.doublePi
         }

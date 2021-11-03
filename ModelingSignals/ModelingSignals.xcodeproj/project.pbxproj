@@ -13,8 +13,7 @@
 		841C41D7272FE61700035649 /* GroupPolyharmonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C41D6272FE61700035649 /* GroupPolyharmonic.swift */; };
 		842EB81D272FF61500656C5A /* SignalFormulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB81C272FF61500656C5A /* SignalFormulas.swift */; };
 		842EB820273000BE00656C5A /* SignalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB81F273000BE00656C5A /* SignalDelegate.swift */; };
-		842EB822273000F100656C5A /* SignalModulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB821273000F100656C5A /* SignalModulation.swift */; };
-		842EB8242730012800656C5A /* GroupModulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB8232730012800656C5A /* GroupModulation.swift */; };
+		842EB8242730012800656C5A /* Modulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB8232730012800656C5A /* Modulation.swift */; };
 		842EB829273001B100656C5A /* GroupAmplitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB828273001B100656C5A /* GroupAmplitude.swift */; };
 		842EB82B2730030A00656C5A /* GroupFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EB82A2730030A00656C5A /* GroupFrequency.swift */; };
 		844A2BFD26F7588F008484EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2BFC26F7588F008484EE /* AppDelegate.swift */; };
@@ -53,8 +52,7 @@
 		841C41D6272FE61700035649 /* GroupPolyharmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPolyharmonic.swift; sourceTree = "<group>"; };
 		842EB81C272FF61500656C5A /* SignalFormulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFormulas.swift; sourceTree = "<group>"; };
 		842EB81F273000BE00656C5A /* SignalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDelegate.swift; sourceTree = "<group>"; };
-		842EB821273000F100656C5A /* SignalModulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalModulation.swift; sourceTree = "<group>"; };
-		842EB8232730012800656C5A /* GroupModulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModulation.swift; sourceTree = "<group>"; };
+		842EB8232730012800656C5A /* Modulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modulation.swift; sourceTree = "<group>"; };
 		842EB828273001B100656C5A /* GroupAmplitude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAmplitude.swift; sourceTree = "<group>"; };
 		842EB82A2730030A00656C5A /* GroupFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFrequency.swift; sourceTree = "<group>"; };
 		844A2BF926F7588F008484EE /* ModelingSignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelingSignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,8 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				842EB81F273000BE00656C5A /* SignalDelegate.swift */,
-				842EB821273000F100656C5A /* SignalModulation.swift */,
-				842EB8232730012800656C5A /* GroupModulation.swift */,
+				842EB8232730012800656C5A /* Modulation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -452,12 +449,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842EB8242730012800656C5A /* GroupModulation.swift in Sources */,
+				842EB8242730012800656C5A /* Modulation.swift in Sources */,
 				842EB820273000BE00656C5A /* SignalDelegate.swift in Sources */,
 				842EB82B2730030A00656C5A /* GroupFrequency.swift in Sources */,
 				842EB81D272FF61500656C5A /* SignalFormulas.swift in Sources */,
 				844A2BFF26F7588F008484EE /* ViewController.swift in Sources */,
-				842EB822273000F100656C5A /* SignalModulation.swift in Sources */,
 				842EB829273001B100656C5A /* GroupAmplitude.swift in Sources */,
 				841C41D1272FE4E000035649 /* Signal.swift in Sources */,
 				844A2BFD26F7588F008484EE /* AppDelegate.swift in Sources */,

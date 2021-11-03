@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GroupAmplitude {
+class GroupAmplitude: Modulation {
     // MARK: - Properties
     private var carrierSignal: Signal
     private var modulationSignal: Signal

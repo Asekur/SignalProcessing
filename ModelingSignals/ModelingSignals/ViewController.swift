@@ -28,6 +28,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var dutyModuleTextField: NSTextField!
     
     private let chartColor = NSColor(calibratedRed: 0.3, green: 0.5, blue: 0.5, alpha: 1).cgColor
+    private var signalPlayer: SignalPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class ViewController: NSViewController {
         case 0:
             return Signal(signalType: SignalFormulas.sinus, currentPhase: phase, frequency: frequency, amplitude: amplitude)
         case 1:
-            //SignalFormulas.duty = duty
+            SignalFormulas.duty = duty * SignalFormulas.doublePi / 100.0
             return Signal(signalType: SignalFormulas.impulse, currentPhase: phase, frequency: frequency, amplitude: amplitude)
         case 2:
             return Signal(signalType: SignalFormulas.triangle, currentPhase: phase, frequency: frequency, amplitude: amplitude)
@@ -52,61 +53,79 @@ class ViewController: NSViewController {
         }
     }
     
-    func defaultSignalCreate() {
-        let signal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
-        for i in 0..<SignalFormulas.frameCount {
-            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
-            signal.incrementPhase()
-        }
+    func defaultSignalCreate() -> Modulation {
+        let phase = phaseTextField.floatValue / 180 * Float.pi
+        let frequency = frequencyTextField.floatValue / 100
+        
+        return detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phase, frequency: frequency, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
     }
     
-    func polyharmonicSignalCreate() {
-        let fistSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
-        let secondSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModuleTextField.floatValue, frequency: frequencyModuleTextField.floatValue, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
-        let signal = GroupPolyharmonic(signals: [fistSignal, secondSignal])
-        for i in 0..<SignalFormulas.frameCount {
-            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
-            signal.incrementPhase()
-        }
+    func polyharmonicSignalCreate() -> Modulation {
+        let phase = phaseTextField.floatValue / 180 * Float.pi
+        let phaseModule = phaseModuleTextField.floatValue / 180 * Float.pi
+        
+        let frequency = frequencyTextField.floatValue / 100
+        let frequencyModule = frequencyModuleTextField.floatValue / 100
+        
+        let fistSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phase, frequency: frequency, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
+        let secondSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModule, frequency: frequencyModule, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
+        return GroupPolyharmonic(signals: [fistSignal, secondSignal])
     }
     
-    func amplitudeSignalCreate() {
-        let carrierSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
-        let modulationSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModuleTextField.floatValue, frequency: frequencyModuleTextField.floatValue, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
-        let signal = GroupAmplitude(carrierSignal: carrierSignal, modulationSignal: modulationSignal)
-        for i in 0..<SignalFormulas.frameCount {
-            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
-            signal.incrementPhase()
-        }
+    func amplitudeSignalCreate() -> Modulation {
+        let phase = phaseTextField.floatValue / 180 * Float.pi
+        let phaseModule = phaseModuleTextField.floatValue / 180 * Float.pi
+        
+        let frequency = frequencyTextField.floatValue / 100
+        let frequencyModule = frequencyModuleTextField.floatValue / 100
+        
+        let carrierSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phase, frequency: frequency, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
+        let modulationSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModule, frequency: frequencyModule, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
+        return GroupAmplitude(carrierSignal: carrierSignal, modulationSignal: modulationSignal)
     }
     
-    func frequencySignalCreate() {
-        let carrierSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phaseTextField.floatValue, frequency: frequencyTextField.floatValue, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
-        let modulationSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModuleTextField.floatValue, frequency: frequencyModuleTextField.floatValue, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
-        let signal = GroupFrequency(carrierSignal: carrierSignal, modulationSignal: modulationSignal, currentPhase: 0.0)
-        for i in 0..<SignalFormulas.frameCount {
-            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
-            signal.incrementPhase()
-        }
+    func frequencySignalCreate() -> Modulation {
+        let phase = phaseTextField.floatValue / 180 * Float.pi
+        let phaseModule = phaseModuleTextField.floatValue / 180 * Float.pi
+        
+        let frequency = frequencyTextField.floatValue / 100
+        let frequencyModule = frequencyModuleTextField.floatValue / 100
+        
+        let carrierSignal = detectSignalWithType(typeNumber: signalTypePopUpButton.indexOfSelectedItem, phase: phase, frequency: frequency, amplitude: amplitudeTextField.floatValue, duty: dutyTextField.floatValue)
+        let modulationSignal = detectSignalWithType(typeNumber: signalTypeModulePopUpButton.indexOfSelectedItem, phase: phaseModule, frequency: frequencyModule, amplitude: amplitudeModuleTextField.floatValue, duty: dutyModuleTextField.floatValue)
+        return GroupFrequency(carrierSignal: carrierSignal, modulationSignal: modulationSignal, currentPhase:  phase)
     }
     
     @IBAction func generateClick(_ sender: Any) {
         self.signalChart.data?.clearValues()
         self.setData()
         let modelingType = modelingTypeSegmentControl.indexOfSelectedItem
+        let signal: Modulation!
         //отображение сигнала на графике
         switch modelingType {
         case 0:
-            defaultSignalCreate()
+            signal = defaultSignalCreate()
         case 1:
-            polyharmonicSignalCreate()
+            signal = polyharmonicSignalCreate()
         case 2:
-            amplitudeSignalCreate()
+            signal = amplitudeSignalCreate()
         case 3:
-            frequencySignalCreate()
+            signal = frequencySignalCreate()
         default:
             fatalError()
         }
+        
+        //график
+        for i in 0..<SignalFormulas.frameCount {
+            //let value = Double(signal.getValue())
+            self.appendData(data: ChartDataEntry(x: Double(i), y: Double(signal.getValue())))
+            signal.incrementPhase()
+        }
+    
+        //воспроизведение звука
+        self.signalPlayer?.stopEngine()
+        self.signalPlayer = SignalPlayer(modulation: signal)
+        self.signalPlayer?.reproduceSignal()
     }
     
     private func setupUI() {

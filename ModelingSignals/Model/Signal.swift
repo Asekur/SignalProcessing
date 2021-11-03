@@ -8,7 +8,7 @@
 import Foundation
 
 //описание сигнала
-class Signal: SignalModulation {
+class Signal: Modulation {
     // MARK: - Properties
     private var type: (Float) -> Float
     private var currentPhase: Float
